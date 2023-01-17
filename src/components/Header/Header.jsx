@@ -30,7 +30,9 @@ export default function Header() {
                             <div className="dropdown-menu">
                                 <NavLink className="dropdown-item" to="/use-state">useState</NavLink>
                                 <NavLink className="dropdown-item" to="/use-effect">useEffect</NavLink>
-                               
+                                <NavLink className="dropdown-item" to="/use-call-back">useCallBack</NavLink>
+                                <NavLink className="dropdown-item" to="/use-memo">useMemo</NavLink>
+                                <NavLink className="dropdown-item" to="/use-ref">useRef</NavLink>
                             </div>
                         </li>
                        

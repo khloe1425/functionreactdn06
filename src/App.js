@@ -11,6 +11,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import DemoUseState from './pages/Hook/DemoUseState/DemoUseState';
 import DemoUseEffect from './pages/Hook/DemoUseEffect/DemoUseEffect';
+import DemoUseCallBack from './pages/Hook/DemoUseCallBack/DemoUseCallBack';
+import DemoUseMemo from './pages/Hook/DemoUseMemo/DemoUseMemo';
+import DemoUseRef from './pages/Hook/DemoUseRef/DemoUseRef';
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
         <Route exact path="/registers" component={Registers} />
         <Route exact path="/use-state" component={DemoUseState} />
         <Route exact path="/use-effect" component={DemoUseEffect} />
+        <Route exact path="/use-call-back" component={DemoUseCallBack} />
+        <Route exact path="/use-memo" component={DemoUseMemo} />
+        <Route exact path="/use-ref" component={DemoUseRef} />
        
        {/* tương tự default của switch case  */}
         <Route exact path="/" component={Home} />
