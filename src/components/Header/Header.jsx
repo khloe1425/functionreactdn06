@@ -33,9 +33,19 @@ export default function Header() {
                                 <NavLink className="dropdown-item" to="/use-call-back">useCallBack</NavLink>
                                 <NavLink className="dropdown-item" to="/use-memo">useMemo</NavLink>
                                 <NavLink className="dropdown-item" to="/use-ref">useRef</NavLink>
+                                <NavLink className="dropdown-item" to="/tang-giam-fs">Tang giam font-size</NavLink>
+                                <NavLink className="dropdown-item" to="/fakebook-app">Fakebook App</NavLink>
                             </div>
                         </li>
-                       
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                API
+                            </a>
+                            <div className="dropdown-menu">
+                                <NavLink className="dropdown-item" to="/shoes-shop-api">ShoesShopAPI</NavLink>
+                               
+                            </div>
+                        </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />

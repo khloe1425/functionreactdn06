@@ -14,6 +14,9 @@ import DemoUseEffect from './pages/Hook/DemoUseEffect/DemoUseEffect';
 import DemoUseCallBack from './pages/Hook/DemoUseCallBack/DemoUseCallBack';
 import DemoUseMemo from './pages/Hook/DemoUseMemo/DemoUseMemo';
 import DemoUseRef from './pages/Hook/DemoUseRef/DemoUseRef';
+import TangGiamFS from './pages/Hook/ReduxHook/TangGiamFS';
+import FakebookApp from './pages/Hook/ReduxHook/FakebookApp';
+import ShoesShopAPI from './pages/API/ShoesShopAPI';
 
 function App() {
   return (
@@ -41,6 +44,9 @@ function App() {
         <Route exact path="/use-call-back" component={DemoUseCallBack} />
         <Route exact path="/use-memo" component={DemoUseMemo} />
         <Route exact path="/use-ref" component={DemoUseRef} />
+        <Route exact path="/tang-giam-fs" component={TangGiamFS} />
+        <Route exact path="/fakebook-app" component={FakebookApp} />
+        <Route exact path="/shoes-shop-api" component={ShoesShopAPI} />
        
        {/* tương tự default của switch case  */}
         <Route exact path="/" component={Home} />
