@@ -17,6 +17,8 @@ import DemoUseRef from './pages/Hook/DemoUseRef/DemoUseRef';
 import TangGiamFS from './pages/Hook/ReduxHook/TangGiamFS';
 import FakebookApp from './pages/Hook/ReduxHook/FakebookApp';
 import ShoesShopAPI from './pages/API/ShoesShopAPI';
+import ShoesShopAwait from './pages/API/ShoesShopAwait';
+import ShoesShopMiddleWare from './pages/API/ShoesShopMiddleWare';
 
 function App() {
   return (
@@ -47,6 +49,8 @@ function App() {
         <Route exact path="/tang-giam-fs" component={TangGiamFS} />
         <Route exact path="/fakebook-app" component={FakebookApp} />
         <Route exact path="/shoes-shop-api" component={ShoesShopAPI} />
+        <Route exact path="/shoes-shop-await" component={ShoesShopAwait} />
+        <Route exact path="/middle-ware" component={ShoesShopMiddleWare} />
        
        {/* tương tự default của switch case  */}
         <Route exact path="/" component={Home} />

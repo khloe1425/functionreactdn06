@@ -43,7 +43,8 @@ export default function Header() {
                             </a>
                             <div className="dropdown-menu">
                                 <NavLink className="dropdown-item" to="/shoes-shop-api">ShoesShopAPI</NavLink>
-                               
+                                <NavLink className="dropdown-item" to="/shoes-shop-await">ShoesShopAwait</NavLink>
+                                <NavLink className="dropdown-item" to="/middle-ware">MiddleWare</NavLink>
                             </div>
                         </li>
                     </ul>
