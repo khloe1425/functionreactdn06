@@ -80,6 +80,6 @@ export default function ShoesShopAwait() {
 
 // Promise1.then((r1) => { 
 //     Promise2.then((r2) => { 
-//         Promise2.then()
+//         Promise3.then()
 //      })
 //  })

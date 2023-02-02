@@ -19,28 +19,49 @@ import FakebookApp from './pages/Hook/ReduxHook/FakebookApp';
 import ShoesShopAPI from './pages/API/ShoesShopAPI';
 import ShoesShopAwait from './pages/API/ShoesShopAwait';
 import ShoesShopMiddleWare from './pages/API/ShoesShopMiddleWare';
+import { HomeTemplate } from './templates/HomeTemplate';
+import { FormTemplate } from './templates/FormTemplate';
+
+
+
 
 function App() {
   return (
     <BrowserRouter>
 
-      <Header />
+    {/* Dùng chung cho toàn bộ trang */}
+      {/* <Header /> */}
 
       <Switch>
 
         {/* C2:Route => render  */}
         {/* học chuyên sâu ở Template */}
-        <Route exact path="/home" render={() => {
+        {/* <Route exact path="/home" render={(propsRoute) => {
           //trả về UI mới có chứa component muốn hiển thị
           return <div className='container'>
-              <Home/>
+              <Header/>
+              <Home {...propsRoute} />
           </div>
         }} />
+        <Route exact path="/about" render={() => {
+          return <div className='container'>
+              <Header/>
+              <About/>
+          </div>
+        }} />
+        <Route exact path="/login" render={() => {
+          return <div className='container'>
+           
+              <Login/>
+          </div>
+        }} /> */}
 
         {/* C1:Route => component  */}
-        <Route exact path="/about" component={About} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/registers" component={Registers} />
+        
+        <HomeTemplate path="/home" component={Home} />
+        <HomeTemplate  path="/about" component={About} />
+        <FormTemplate  path="/login" component={Login} />
+        <FormTemplate  path="/registers" component={Registers} />
         <Route exact path="/use-state" component={DemoUseState} />
         <Route exact path="/use-effect" component={DemoUseEffect} />
         <Route exact path="/use-call-back" component={DemoUseCallBack} />
@@ -53,7 +74,7 @@ function App() {
         <Route exact path="/middle-ware" component={ShoesShopMiddleWare} />
        
        {/* tương tự default của switch case  */}
-        <Route exact path="/" component={Home} />
+        <HomeTemplate  path="/" component={Home} />
 
 
       </Switch>

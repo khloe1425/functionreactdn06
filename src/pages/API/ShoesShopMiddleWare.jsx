@@ -59,7 +59,7 @@ export default function ShoesShopMiddleWare() {
             <h2>ShoesShopMiddleWare</h2>
 
             <div className="row">
-                {renderUI()};
+                {renderUI()}
             </div>
         </div>
     )
