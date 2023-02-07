@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 
 
 import { fakebookReducer } from "./reducers/fakebookReducer";
+import { quanLyNguoiDungReducer } from "./reducers/quanLyNguoiDungReducer";
 import { shoesShopReducer } from "./reducers/shoesShopReducer";
 import { tangGiamFSReducer } from "./reducers/tangGiamFSReducer";
 
@@ -12,10 +13,11 @@ const rootReducer = combineReducers({
     // tangGiamFSReducer:tangGiamFSReducer
     tangGiamFSReducer,
     fakebookReducer,
-    shoesShopReducer
+    shoesShopReducer,
+    quanLyNguoiDungReducer
 })
 
-export const store = createStore(rootReducer,applyMiddleware(thunk))
+export const store = createStore(rootReducer, applyMiddleware(thunk))
 
 // createStore(rootReducer,applyMiddleware(thunk))
 

@@ -7,7 +7,7 @@ import Registers from './pages/Registers/Registers';
 
 
 // Cài đặt thư viện react-router-dom
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import DemoUseState from './pages/Hook/DemoUseState/DemoUseState';
 import DemoUseEffect from './pages/Hook/DemoUseEffect/DemoUseEffect';
@@ -21,13 +21,17 @@ import ShoesShopAwait from './pages/API/ShoesShopAwait';
 import ShoesShopMiddleWare from './pages/API/ShoesShopMiddleWare';
 import { HomeTemplate } from './templates/HomeTemplate';
 import { FormTemplate } from './templates/FormTemplate';
+import DemoRouter from './pages/Router/DemoRouter';
+import Detail from './pages/Router/Detail';
 
+//Thư viện hỗ trợ chuyển hướng trang cho các file không phải component
+import { createBrowserHistory } from 'history';
 
-
+export const history = createBrowserHistory();
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
 
     {/* Dùng chung cho toàn bộ trang */}
       {/* <Header /> */}
@@ -60,6 +64,11 @@ function App() {
         
         <HomeTemplate path="/home" component={Home} />
         <HomeTemplate  path="/about" component={About} />
+        <HomeTemplate  path="/demo-router" component={DemoRouter} />
+
+        <HomeTemplate  path="/detail/:id" component={Detail} />
+
+
         <FormTemplate  path="/login" component={Login} />
         <FormTemplate  path="/registers" component={Registers} />
         <Route exact path="/use-state" component={DemoUseState} />
@@ -79,7 +88,7 @@ function App() {
 
       </Switch>
 
-    </BrowserRouter>
+    </Router>
   );
 }
 

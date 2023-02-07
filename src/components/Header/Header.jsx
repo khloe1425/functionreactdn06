@@ -23,6 +23,9 @@ export default function Header() {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/registers">Registers</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/demo-router">DemoRouter</NavLink>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Hooks
