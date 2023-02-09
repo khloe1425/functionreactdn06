@@ -1,7 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 export default function Header() {
+    
+   let {userLogin} = useSelector(state => state.quanLyNguoiDungReducer)
+    /**
+     * B1: tạo hàm đăng xuất
+     * B2: xóa local storage
+     * B3: dispatch => reducer (null)
+     */
+
+
+
+
     return (
         <header className='container'>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -51,10 +63,8 @@ export default function Header() {
                             </div>
                         </li>
                     </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                    {/*TODO: binding tên user đã login */}
+                   <p className='text-white'>{(userLogin!=null)?userLogin.taiKhoan:""}</p>
                 </div>
             </nav>
 

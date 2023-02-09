@@ -26,6 +26,11 @@ import Detail from './pages/Router/Detail';
 
 //Thư viện hỗ trợ chuyển hướng trang cho các file không phải component
 import { createBrowserHistory } from 'history';
+import { AdminTemplate } from './templates/AdminTemplate';
+import DemoAntd from './pages/Admin/DemoAntd';
+
+
+
 
 export const history = createBrowserHistory();
 
@@ -71,6 +76,12 @@ function App() {
 
         <FormTemplate  path="/login" component={Login} />
         <FormTemplate  path="/registers" component={Registers} />
+        
+        <AdminTemplate path="/demo-antd" component={DemoAntd} />
+        
+        
+        
+        
         <Route exact path="/use-state" component={DemoUseState} />
         <Route exact path="/use-effect" component={DemoUseEffect} />
         <Route exact path="/use-call-back" component={DemoUseCallBack} />

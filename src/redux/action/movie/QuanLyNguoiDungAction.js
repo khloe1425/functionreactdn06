@@ -62,6 +62,7 @@ export const dangnhapAction = (thongTinLogin) => {
             let userJSON = JSON.stringify(result.data.content)
             localStorage.setItem(userMovie,userJSON);
 
+            history.push('/home');
 
             let action = {
                 type: DANG_NHAP,

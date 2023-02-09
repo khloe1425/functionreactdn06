@@ -8,6 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './redux/configStore';
 
+//antd
+import 'antd/dist/reset.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
